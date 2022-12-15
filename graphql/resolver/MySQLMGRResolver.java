@@ -1,14 +1,11 @@
 package com.asecl.simdc.org.simdc_project.graphql.resolver;
 
-import com.asecl.simdc.org.simdc_project.db.entity.MacAddress;
 import com.asecl.simdc.org.simdc_project.db.entity.MySQLMGR;
 import com.asecl.simdc.org.simdc_project.db.service.MySQLMGRService;
 import com.asecl.simdc.org.simdc_project.exception.QLException;
-import com.asecl.simdc.org.simdc_project.graphql.entity.input.MGRIPInput;
-import com.asecl.simdc.org.simdc_project.graphql.entity.out.ResponseCreateTestConfigurationModel;
 import com.asecl.simdc.org.simdc_project.graphql.entity.out.ResponseMGRStatus;
 import com.asecl.simdc.org.simdc_project.util.ILockCallback;
-import com.asecl.simdc.org.simdc_project.util.LockManager;
+import com.asecl.simdc.org.simdc_project.security.LockManager;
 import graphql.kickstart.tools.GraphQLMutationResolver;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.springframework.beans.factory.annotation.Autowired;

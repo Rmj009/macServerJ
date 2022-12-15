@@ -3,7 +3,6 @@ package com.asecl.simdc.org.simdc_project.db.service;
 import com.asecl.simdc.org.simdc_project.db.entity.*;
 import com.asecl.simdc.org.simdc_project.db.mapper.MacStatusMapper;
 import com.asecl.simdc.org.simdc_project.db.mapper.Product_MacAddressMapper;
-import com.asecl.simdc.org.simdc_project.exception.QLException;
 import com.asecl.simdc.org.simdc_project.file.XmlMacProduct;
 import com.asecl.simdc.org.simdc_project.ftp.FTPUploadUtils;
 import com.asecl.simdc.org.simdc_project.graphql.entity.customEnum.EnumIncreaseType;
@@ -13,7 +12,7 @@ import com.asecl.simdc.org.simdc_project.graphql.entity.out.ResponseModel;
 import com.asecl.simdc.org.simdc_project.http.HttpService;
 import com.asecl.simdc.org.simdc_project.util.Constant;
 import com.asecl.simdc.org.simdc_project.util.ILockCallback;
-import com.asecl.simdc.org.simdc_project.util.LockManager;
+import com.asecl.simdc.org.simdc_project.security.LockManager;
 import com.google.common.collect.Lists;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +24,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.xml.bind.JAXBException;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.attribute.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 
 @Service

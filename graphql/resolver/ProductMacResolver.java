@@ -1,21 +1,17 @@
 package com.asecl.simdc.org.simdc_project.graphql.resolver;
 
-import com.asecl.simdc.org.simdc_project.db.entity.Firmware;
 import com.asecl.simdc.org.simdc_project.db.entity.Product_MacAddress;
-import com.asecl.simdc.org.simdc_project.db.entity.User;
 import com.asecl.simdc.org.simdc_project.db.mapper.Product_MacAddressMapper;
 import com.asecl.simdc.org.simdc_project.db.service.FirmwareService;
 import com.asecl.simdc.org.simdc_project.db.service.Product_MacAddressService;
 import com.asecl.simdc.org.simdc_project.exception.QLException;
 import com.asecl.simdc.org.simdc_project.ftp.FTPUploadUtils;
-import com.asecl.simdc.org.simdc_project.graphql.entity.input.FirmwareCreationInput;
 import com.asecl.simdc.org.simdc_project.graphql.entity.input.SyncIput;
 import com.asecl.simdc.org.simdc_project.graphql.entity.input.SyncPoInput;
 import com.asecl.simdc.org.simdc_project.graphql.entity.out.ResponseModel;
 import com.asecl.simdc.org.simdc_project.http.HttpService;
-import com.asecl.simdc.org.simdc_project.util.Constant;
 import com.asecl.simdc.org.simdc_project.util.ILockCallback;
-import com.asecl.simdc.org.simdc_project.util.LockManager;
+import com.asecl.simdc.org.simdc_project.security.LockManager;
 import graphql.kickstart.tools.GraphQLMutationResolver;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import graphql.schema.DataFetchingEnvironment;
@@ -29,8 +25,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.Part;
 import javax.xml.bind.JAXBException;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 

@@ -6,7 +6,7 @@ import com.asecl.simdc.org.simdc_project.exception.QLException;
 import com.asecl.simdc.org.simdc_project.graphql.entity.input.*;
 import com.asecl.simdc.org.simdc_project.graphql.entity.out.*;
 import com.asecl.simdc.org.simdc_project.util.ILockCallback;
-import com.asecl.simdc.org.simdc_project.util.LockManager;
+import com.asecl.simdc.org.simdc_project.security.LockManager;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;

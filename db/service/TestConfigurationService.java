@@ -9,10 +9,8 @@ import com.asecl.simdc.org.simdc_project.graphql.entity.out.ResponseCreateTestCo
 import com.asecl.simdc.org.simdc_project.graphql.entity.out.ResponseLotCodeModel;
 import com.asecl.simdc.org.simdc_project.graphql.entity.out.ResponseMacModel;
 import com.asecl.simdc.org.simdc_project.graphql.entity.out.ResponseTotalModel;
-import com.asecl.simdc.org.simdc_project.graphql.resolver.TestconfigurationResolver;
 import com.asecl.simdc.org.simdc_project.util.Constant;
-import com.asecl.simdc.org.simdc_project.util.ILockCallback;
-import com.asecl.simdc.org.simdc_project.util.LockManager;
+import com.asecl.simdc.org.simdc_project.security.LockManager;
 import com.asecl.simdc.org.simdc_project.util.UtilFunc;
 import graphql.schema.DataFetchingEnvironment;
 import org.springframework.beans.factory.annotation.Autowired;

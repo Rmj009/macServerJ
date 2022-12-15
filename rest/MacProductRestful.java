@@ -1,14 +1,8 @@
 package com.asecl.simdc.org.simdc_project.rest;
 
-import com.asecl.simdc.org.simdc_project.db.entity.Product_MacAddress;
-import com.asecl.simdc.org.simdc_project.db.service.JaxbService;
 //import com.asecl.simdc.org.simdc_project.db.service.ProductITService;
-import com.asecl.simdc.org.simdc_project.exception.QLException;
 import com.asecl.simdc.org.simdc_project.file.XmlMacProduct;
-import com.asecl.simdc.org.simdc_project.graphql.entity.out.ResponseModel;
-import com.asecl.simdc.org.simdc_project.util.Constant;
-import com.asecl.simdc.org.simdc_project.util.ILockCallback;
-import com.asecl.simdc.org.simdc_project.util.LockManager;
+        import com.asecl.simdc.org.simdc_project.security.LockManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -16,8 +10,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 //@RestController

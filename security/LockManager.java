@@ -1,5 +1,6 @@
-package com.asecl.simdc.org.simdc_project.util;
+package com.asecl.simdc.org.simdc_project.security;
 
+import com.asecl.simdc.org.simdc_project.util.ILockCallback;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

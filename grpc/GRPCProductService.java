@@ -1,16 +1,12 @@
 package com.asecl.simdc.org.simdc_project.grpc;
 
 //import com.asecl.simdc.org.simdc_project.db.service.ProductITService;
-import com.asecl.simdc.org.simdc_project.graphql.entity.out.ResponseCreateTestConfigurationModel;
-import com.asecl.simdc.org.simdc_project.graphql.resolver.TestconfigurationResolver;
-import com.asecl.simdc.org.simdc_project.util.ILockCallback;
-import com.asecl.simdc.org.simdc_project.util.LockManager;
+import com.asecl.simdc.org.simdc_project.security.LockManager;
 import com.simdc_project.productmacfromit.grpc.ProductMacFromITProto;
 import com.simdc_project.productmacfromit.grpc.ProductMacServiceGrpc;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
