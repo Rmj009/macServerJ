@@ -1,0 +1,16 @@
+operations
+{ "query": "mutation($file: Upload!, $input: FirmwareCreationInput!) {CreateFirmware(file:$file, input:$input){Result}}", "variables": {"file": null, "input": {"saveName": "Sink0210.xuv", "name": "aaa", "version": "1.00", "md5": "9e36899fe25b0c8ce551c7e515df73d8", "ownerEmplayeeId": "01978"}} }
+
+
+map
+{ "file0": ["variables.file"] }
+
+
+file0
+(UploadFile)
+
+
+
+
+/////
+Postman --> form-data

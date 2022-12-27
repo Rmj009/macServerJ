@@ -1,0 +1,349 @@
+#---
+#Project_Family
+# Create ===================================================================
+mutation($input: ProductFamilyCreationInput!){
+  CreateProductFamily(input: $input){
+    Result
+  }
+}
+
+{
+  "input": {
+    "name": "QCC5121",
+    "remark": "這是測試 !!",
+    "ownerEmplayeeId": "01978"
+  }
+}
+
+# Update ===================================================================
+mutation($input: ProductFamilyUpgradeInput!){
+  UpdateProductFamily(input: $input){
+    Result
+  }
+}
+
+{
+  "input": {
+    "originName": "QCC5121",
+    "name": "QCC5121-0"
+  }
+}
+
+# Read ===================================================================
+query($input: ProductFamilyQueryInput){
+  QueryProductFamily(input: $input){
+    Name
+    Remark
+    Products{
+      ID
+      Name
+      Remark
+    }
+
+  }
+}
+
+{
+  "input": {
+    "ownerEmplayeeId": "01978"
+  }
+}
+
+# Delete ===================================================================
+mutation($input: ProductFamilyDeleteInput!){
+  DeleteProductFamily(input: $input){
+   Result
+  }
+}
+
+{
+  "input": {
+    "name": "QCC5121"
+  }
+}
+
+
+#################################################################
+#Product
+mutation($input: ProductCreationInput!){
+  CreateProduct(input: $input){
+    Result
+  }
+}
+
+{
+   "input": {
+     "name": "QCC5121",
+     "remark": "這是測試 !!",
+     "familyName": "QCC5121",
+     "ownerEmplayeeId": "01978"
+   }
+ }
+
+#################################################################
+#Mac
+mutation($input:MacCreationInput!){
+  CreateMacAddress(input: $input){
+    Result
+  }
+}
+
+{
+  "input":{
+    "address": "50-38-2f-00-00-00",
+		"totalCount": 10000,
+    "macType": "BT",
+    "increaseType": "OddAndEvenRotateId",
+    "ownerEmplayeeId": "01978"
+  }
+}
+
+
+#################################################################
+#Software
+query($input: SoftwareQueryInput){
+  QuerySoftware(input: $input){
+    Name
+    Versions{
+      ID
+      Version
+      CreatedTime
+      CreatedOwner{
+        ID
+        EmployeeID
+      }
+    }
+  }
+}
+
+{
+  "input":null
+}
+
+##################################################################
+#Customer
+query ($input: CustomerQueryInput!) {
+  QueryCustomer(input: $input) {
+    ID
+    Name
+    Phone
+    Remark
+    CreatedOwner
+    {
+      ID
+      EmployeeID
+    }
+    CreatedTime
+  }
+  }
+
+{
+  "input": {
+    "name": "1122",
+    "phone": "1",
+    "remark": "1",
+    "ownerEmplayeeId": "01978"
+  }
+}
+
+##################################################################
+#Testconfiguration
+query ($input: TestConfigurationQueryInput!) {
+  QueryTestConfiguration(input: $input) {
+    ID
+    LotCode
+    Status
+    {
+      ID
+      Name
+      CreatedTime
+    }
+    Product
+    {
+      ID
+      Name
+      
+    }
+    FW
+    {
+      ID
+      Name
+      Version
+      Path
+      Remark
+      MD5
+    }
+    SW
+    {
+      ID
+      Name
+      Version
+      CreatedTime
+      
+    }
+    Customer
+    {
+      ID
+      Name
+      Phone
+      Remark
+      CreatedTime
+    }
+    DutDevices
+    {
+      ID
+      IP
+      Name
+    }
+    CreatedOwner
+    {
+      ID
+      EmployeeID
+    }
+    CreatedTime
+  }
+}
+{
+  "input": {
+    "name": "1122"
+  }
+}
+
+---------------------------------------------------
+mutation($input:Product_TestConfigurationUpgradeInput!){
+  UpdateProductTestConfiguration(input: $input){
+    Result
+  }
+}
+
+{
+  "input":{
+    "lotcode": "1",
+		"fwName": "2",
+    "fwVersion": "2",
+    "swName": "2",
+    "swVersion": "2"
+  }
+}
+
+---------------------------------------------------
+query($input: TestConfigurationQueryInput){
+  QueryTestConfiguration(input: $input){
+    TotalSize
+    Datas{
+	LotCode
+	FwSwBinding{
+           Software{
+	     Name
+             Version
+	   }
+          
+           Firmware{
+             Name
+             Version
+           }
+	}
+    }
+  }
+}
+
+{
+  "input": {
+    "lotcode": "PD1524MB0219"
+  }
+}
+
+
+---------------------------------------------------
+
+query($input: Product_TestConfigurationQueryInput){
+  QueryProductTestConfiguration(input: $input){
+    TotalSize
+    Datas{
+	LotCode
+	FwSwBinding{
+           Software{
+	     Name
+             Version
+	   }
+          
+           Firmware{
+             Name
+             Version
+           }
+	}
+    }
+  }
+}
+
+{
+  "input": {
+    "lotcode": "PD1524MB0219"
+  }
+}
+---------------------------------------------------
+mutation($input:MacXMLCreate!){
+  CreateMacXLM(input: $input){
+    Result
+  }
+}
+
+{
+  "input": {
+    "address_start": "50-38-2f-00-00-00",
+    "address_end": "50-38-2f-00-00-f0",
+    "macType": "BT",
+    "po": "1",
+    "lotcode":"0"
+  }
+}
+
+---------------------------------------------------
+
+query($input: MacQueryInput){
+  QueryMacAddress(input: $input){
+	Address
+  }
+}
+
+{
+  "input": {
+    "macType": "BT"
+  }
+}
+
+
+--------------------------------------------------
+query{
+  QueryMySQLMGR{
+    CHANNEL_NAME
+    MEMBER_ID
+    MEMBER_HOST
+    MEMBER_PORT
+    MEMBER_STATE
+    MEMBER_ROLE
+    MEMBER_VERSION
+  }
+}
+
+-------------------------------------------------
+mutation{
+  MYSQL_MGR_Force_Single_Member_For_This_Host{
+    CHANNEL_NAME
+    MEMBER_ID
+    MEMBER_HOST
+    MEMBER_PORT
+    MEMBER_STATE
+    MEMBER_ROLE
+    MEMBER_VERSION
+
+ }
+
+}
+-------------------------------
+query{
+  QueryNewLotcode{
+    LotCode
+  }
+}
+

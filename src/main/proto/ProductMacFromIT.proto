@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.simdc_project.productmacfromit.grpc";
+option java_outer_classname = "ProductMacFromITProto";
+
+package ITProto;
+
+service ProductMacService {
+  rpc SendNewMacInfo (ProductInfoRequest) returns (ProductInfoReply) {}
+}
+
+message ProductInfoRequest {
+    repeated ProductMacInfos productInfos = 1;
+}
+
+message ProductMacInfos {
+  string lotCode = 1;
+  string pid = 2;
+  string macAddress = 3;
+  string license = 4;
+  MacType macType = 5;
+}
+
+enum MacType {
+  BT = 0;
+  Wifi = 1;
+}
+
+message ProductInfoReply {
+  bool result = 1;
+  string errMsg = 2;
+}

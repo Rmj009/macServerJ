@@ -1,0 +1,10 @@
+Tool : https://github.com/fullstorydev/grpcurl/releases
+grpcurl.exe --plaintext -d {\"name\":\"aaa\"} localhost:50051 hello.Greeter/SayHello
+
+Spring boot grpc : https://yidongnan.github.io/grpc-spring-boot-starter/zh-CN/server/getting-started.html
+
+
+grpcurl.exe --plaintext -d {\"productInfos\":[{\"lotCode\":\"aaa\",\"macAddress\":\"111\",\"license\":\"111\"},{\"lotCode\":\"aaa2\",\"macAddress\":\"1112\",\"license\":\"1112\"}]} localhost:50051 ITProto.ProductMacService/SendNewMacInfo
+
+grpcurl.exe --plaintext -d {\"productInfos\":[{\"lotCode\":\"003\",\"pid\":\"003\",\"macAddress\":\"50-38-2f-00-00-03\",\"license\":\"111aaa\",\"macType\":\"BT\"},{\"lotCode\":\"004\",\"pid\":\"004\",\"macAddress\":\"50-38-2f-00-00-04\",\"license\":\"111aaa4\",\"macType\":\"BT\"}]} localhost:50051 ITProto.ProductMacService/SendNewMacInfo
+

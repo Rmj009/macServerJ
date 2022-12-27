@@ -1,0 +1,5 @@
+
+"C:\Program Files\AdoptOpenJDK\jdk-8.0.252.09-hotspot\bin\java.exe" -Dmaven.multiModuleProjectDirectory=C:\Git_Project\SIDMC\SIMDC_DB "-Dmaven.home=C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.3\plugins\maven\lib\maven3" "-Dclassworlds.conf=C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.3\plugins\maven\lib\maven3\bin\m2.conf" "-Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.3\plugins\maven\lib\maven-event-listener.jar" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.3\lib\idea_rt.jar=53529:C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.3\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar" org.codehaus.classworlds.Launcher -Didea.version2019.3.3 clean
+
+
+pause
